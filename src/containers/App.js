@@ -8,9 +8,11 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      data: []
+          data: []
     };
   }
+
+  
 
   addTodo(val){
         const todo = {
@@ -32,7 +34,7 @@ class App extends React.Component {
   render(){
     return (
       <div className={style.TodoApp}>
-        <Title count={this.state.data.length} title='Aplication title'/>
+        <Title arrayItems={this.state.data} numberOfTasks={this.state.data.length}/>
       </div>
     )
   }
